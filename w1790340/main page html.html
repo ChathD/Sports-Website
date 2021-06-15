@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<link rel="stylesheet" type="text/css" href="external css.css">
+	<style>
+	/*CSS Cards*/
+/* Float four columns side by side */
+.column {
+	float: left;
+	width: 33%;
+	padding: 0 20px;
+	column-gap:20px; 
+} /* Remove extra left and right margins, due to padding */
+
+.row {
+	margin: 0 -5px;
+}/* Clear floats after the columns */ 
+
+.row:after { 
+	content: ""; 
+	display: table; 
+	clear: both; 
+}/* Responsive columns */
+
+@media screen and (max-width: 600px) {
+.column {
+	width: 50%;
+	display: block;
+	margin-bottom: 20px; 
+	}
+}/* Style the counter cards */
+
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	padding: 16px;
+	text-align: center;
+	background-color: #f2f1e8;
+	width: 250px;
+}
+
+.button {
+	border: none;
+	outline: 0;
+	padding: 12px;
+	color: white;
+	background-color:rgba(227, 66, 52,0.9);
+	text-align: center;
+	cursor: pointer;
+	width: 50%;
+	font-size: 18px;
+}
+
+.button:hover {
+	opacity: 0.7;
+}
+
+.colcards{
+	margin-left: 120px;
+}
+
+.card:hover {
+	-ms-transform: scale(1.1); /* IE 9 */
+	-webkit-transform: scale(1.1); /* Safari 3-8 */ 
+	transform: scale(1.1); 
+	z-index: -1;
+}
+
+.cardimages {
+ border-radius:50%;
+ height:200px;
+}
+
+
+
+/*..........................................*/
+
+/*Feedback Button*/
+#fdbutton {
+	position: fixed;
+	top: 50%;
+
+	-webkit-transform: translateX(-100%);
+	-ms-transform: translateX(-100%);
+	transform: translateX(-100%);
+	right:10px;
+	z-index: 5;
+}
+
+#fdbutton a {
+	display: block;
+	text-align: center;
+	padding: 17px;
+	transition: all 0.3s ease;
+	color: #e34234;
+	font-size: 15px;
+	height:95px;
+	width:70px;
+	background:#f2f1e8;
+	color: #e34234;
+}
+
+#fdbutton a:hover {
+	background-color:#050533;
+	color:#f2f1e8;
+}
+
+.hoizontal-text {
+	transform: rotate(180deg);
+	transform-origin: left top 0;
+}
+
+.hoizontal-text {
+	float: left;
+}
+
+
+/*..............*/
+
+/*Navigation bar*/
+
+.topnav {
+	background-color:rgb(255,255,255,1);
+	position: fixed; /* Set the navbar to fixed position */
+	top: 0; /* Position the navbar at the top of the page */
+	width: 100%; /* Full width */
+	height:15%;
+	z-index: 1;
+
+}
+
+.topnav a {
+ 
+	float: right; 
+	display: block;
+	color:#0d698b;
+	font-weight: bold;
+	text-align: center;
+	padding: 38.5px 8px;
+	text-decoration: none;
+	font-size: 15px;
+	width:7%;
+	padding-bottom: 10px;
+	padding-top: 50px;
+}
+
+.topnav a.active {
+	border-bottom: 3px solid #e34234;
+	padding-bottom: 10px;
+	padding-top: 50px;
+} 
+
+.dropdown a.active {
+	border-bottom: 3px solid #e34234;
+	padding-bottom: 10px;
+	padding-top: 50px;
+}
+
+.topnav .icon {
+	display: none;
+}
+
+.dropdown {
+	float: right;
+	overflow: hidden;
+}
+
+.dropdown .dropbtn {
+	font-size: 15px;
+	border: none; 
+	outline: none; 
+	color:#0d698b;
+	padding: 38.5px 10px;
+	background-color: inherit;
+	font-family: inherit;
+	font-weight: bold;
+	margin: 0;
+	padding-bottom: 10px;
+	padding-top: 50px;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+	background-color: #050533;
+	color:#f2f1e8;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f2f1e8;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+.dropdown-content a { 
+	float: none;
+	color: black;
+	padding: 12px 16px;
+	width:50%;
+	display: block;
+	text-align: center;
+}
+
+.dropdown-content a:hover {
+	background-color: #ddd;
+	color:#050533;
+	width:50%
+} 
+
+.dropdown:hover .dropdown-content {
+ display: block;
+}
+
+	</style>
+	<script>
+		
+
+	// Get the form
+		var modal = document.getElementById("myForm"); 
+
+	// Get the button that opens the form
+		var btn = document.getElementById("fdbutton"); 
+
+	// When the user scrolls down 20px from the top of the document, show the button
+		window.onscroll = function() {scrollFunction()};
+		
+		function scrollFunction() {
+		if (document.body.scrollTop > 130 || document.documentElement.scrollTop> 130) {
+		
+		btn.style.display = "block";
+		} else {
+		btn.style.display = "none";
+		} 
+	}
+
+	// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+	// When the user clicks the button, open the modal
+		btn.onclick = function() {
+		modal.style.display = "block"; 
+	}
+
+	// When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
+			modal.style.display = "none";
+	} 
+
+	// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+	}
+
+		</script>
+</head>
+
+<div id="fdbutton">
+ <a href="Comment_form.html"><br><br><br><br><div class="horizontaltext">Feedback    </div></a>
+ </div>
+
+
+<body style="background-color:lightblue;">
+	<p><a href="Cricket.html"></a> </p>
+	<p><a href="Basketball.html"></a> </p>
+	<p><a href="Hockey.html"></a> </p>
+	<p><a href="athletics.html"></a> </p>
+	<p><a href="Main Page.html"></a> </p>
+	
+	<div class="bg-colornw"><br><br><br>
+		<div class="colcards">
+			<div class="row">
+			<div class="column">
+				<div class="card"><div class="cardimages">
+					<img src="https://wallpaperaccess.com/full/1088580.jpg" alt="Cricket" style="width:100%"></div>
+						
+					<br>
+					<h3>Cricket</h3>
+						
+				</div>
+			</div>
+
+			<div class="column">
+				<div class="card"><div class="cardimages">
+					<img src="https://images.glaciermedia.ca/polopoly_fs/1.24026785.1575427188!/fileImage/httpImage/image.jpg_gen/derivatives/landscape_804/a10-12042019-basketball-jpg.jpg" alt="Basketball" style="width:100%"></div>
+					
+					<br>
+					<h3>Basketball</h3>
+					
+				</div>
+			</div>
+
+			<div class="column">
+				<div class="card"><div class="cardimages">
+					<img src="https://cdn.britannica.com/15/201015-050-E24FA163/Field-hockey-match-Poland-Spain-2017.jpg" alt="Hockey" style="width:100%"></div>
+					
+					<br>
+					<h3>Hockey</h3>
+					
+				</div>
+			</div>
+			
+			<div class="column">
+				<div class="card"><div class="cardimages">
+					<img src="https://static.themoscowtimes.com/image/1360/86/4755939-2.jpg" width="180px"  height="180px" alt="Athletics" style="width:70%"></div>
+					
+					<br>
+					<h3>Athletics</h3>
+					
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>	
+		
+		
+
+	<div class="topnav" id="myTopnav">
+			
+	    <img src="SportsImages/logo.png" width="90" height="90">
+		<a href="Site Map (1).html">Site-Map</a>
+		<div class="dropdown">
+				<button class="dropbtn">Contacts
+					
+					<i class="fa fa-caret-down"></i>
+				</button>
+				
+			<div class="dropdown-content">
+				<a href="aboutus.html">Chathuri</a>
+				<a href="aboutus.html">Ushani</a>
+				<a href="aboutus.html">Damshi</a>
+				<a href="aboutus.html">Shanthu</a>
+			</div>
+		</div>
+			<a href="InteractiveMCQ.html">Quiz</a> 
+			<div class="dropdown">
+				<button class="dropbtn">Learn
+					<i class="fa fa-caret-down"></i>
+				</button>
+
+			<div class="dropdown-content">
+				<a href="cricket (1).html">Cricket</a>
+				<a href="Basketball.html">Basketball</a>
+				<a href="Hockey.html">Hockey</a>
+				<a href="athletics.html">Athletics</a>
+			</div>
+		</div>
+		<a href="GalleryPage (1).html">Gallery</a>
+		<a href="mainpage.html" class="active">Home</a>
+	</div>
+	
+	<div class="column left">
+	<footer id="footer" style="color:white; text-align:center">
+		Copyrights &copy; | 2020 | All right reserved <br>
+		
+
+	</footer>
+	<footer>
+	<div class="column right">
+	<a href="page editor 3.html">           </a>
+		<a href="page editor 3.html">Page Editor</a>
+			
+	</div>			
+	</footer>
+	
+	
+	
+</body>
+</html>

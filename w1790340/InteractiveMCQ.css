@@ -1,0 +1,129 @@
+#questions{
+    display:none;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+#resultbox{
+    display:none;
+    margin-left: 300px;
+    margin-bottom: 75px;
+    width: 500px;
+    height:300px;
+    border:3px solid black;
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 50px;
+    background-color: white;
+    
+    
+}
+.Qno{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+
+}
+.Ano{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+#Rname{
+    font-size:30px;
+}
+.Rcontent{
+    font-size: 20px;
+
+}
+#resetquestions{
+    border:3px solid black;
+    background-color: limegreen;
+    margin-left: 25px;
+    margin-top: 25px;
+    color:black;
+    text-align: center;
+    padding:10px 10px;
+    font-size:20px;
+
+}
+#showquiz{
+    border:3px solid black;
+    background-color: limegreen;
+    color:black;
+    text-align: center;
+    padding:10px 10px;
+    font-size:20px;
+
+}
+.quizdescription{
+    margin-top: 50px;
+    margin-left: -50px;
+    text-align: center;
+    font-style: normal;
+    font-size: 30px;
+}
+#QUIZ{
+    height: 450px;
+    width:1200px;
+    border:5px solid;
+    overflow:auto;
+    margin-left: 75px;
+    margin-top:25px;
+    padding-bottom: 10px;
+    background-color:#dae4ee;
+
+}
+#start{
+    border:3px solid black;
+    background-color: deepskyblue;
+    color:black;
+    text-align: center;
+    padding:10px 20px;
+    font-size:20px;
+
+}
+#submitanswer{
+    border:3px solid black;
+    background-color: deepskyblue;
+    color:black;
+    text-align: center;
+    padding:10px 10px;
+    font-size:20px;
+    
+}
+#showresultbox{
+    border:3px solid black;
+    background-color: deepskyblue;
+    color:black;
+    text-align: center;
+    padding:10px 10px;
+    font-size:20px;
+
+}
+#heading{
+    margin-top: 25px;
+    margin-left: 575px;
+    font-size: 35px;
+    font-family: Merriweather Regular;
+}
+#quiz-time-left{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left:475px;
+    font-size: 20px;
+    
+    margin-bottom: 40px;
+}
+.footerbutton{
+    border:3px solid black;
+    background-color: dodgerblue;
+    color:black;
+    text-align: center;
+    padding:10px 10px;
+    font-size:20px;
+    
+
+}
+.fbuttons{
+    margin-left: 475px;
+    margin-top: 50px;
+
+}
+

@@ -1,0 +1,251 @@
+<html>
+<head>
+<style>
+.row{
+ padding:100px;
+}
+.row:after {
+ content: "";
+ display: table;
+ clear:both;
+}
+.column {
+ float: left;
+ width: 25%;
+}
+/* The Modal (background) */
+.modal {
+ display: none;
+ position: fixed;
+ z-index: 1;
+ padding-top: 100px;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 100%;
+ overflow: auto;
+background-image: url("background.jpg");;
+}
+/* Modal Content */
+.modal-content {
+ position: relative;
+ background-color: #fefefe;
+ margin: auto;
+ padding: 0;
+ width: 90%;
+ max-width: 1200px;
+}
+/* The Close Button */
+.close {
+ color: white;
+ position: absolute;
+ top: 10px;
+ right: 25px;
+ font-size: 35px;
+ font-weight: bold;
+}
+.close:hover,
+.close:focus {
+ color: #999;
+ text-decoration: none;
+ cursor: pointer;
+}
+.mySlides {
+ display: none;
+}
+.cursor {
+ cursor: pointer;
+}
+/* Next & previous buttons */
+.prev,
+.next {
+ cursor: pointer;
+ position: absolute;
+ top: 55%;
+ width: auto;
+ padding: 20px;
+ margin-top: -50px;
+ color: white;
+ font-weight: bold;
+ font-size: 50px;
+ transition: 0.6s ease;
+ border-radius: 0 3px 3px 0;
+ user-select: none;
+ webkit-user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+ right: 0;
+ border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+ background-color: rgba(0, 0, 0, 0.8);
+}
+/* Number text (1/3 etc) */
+.numbertext {
+ color: black;
+ font-size: 20px;
+ padding: 8px 12px;
+ position: absolute;
+ top: 0;
+}
+.hover-shadow:hover {
+ box-shadow: 0 200px 200px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 2px;
+  background-color: #404000;
+}
+.grid-item {
+  padding: 2px;
+}
+</style>
+</head>
+<body>
+
+<h1 style="text-align:center">GALLERY</h1>
+<body style="background-color:#C0C0C0;">
+<font size="4" color="#FFFFFF">Select Background Color:</font>
+<select id="bgchoice" onchange="changeBG()">
+ <option value="Lightgreen">Lightgreen</option>
+<option value="RosyBrown">RosyBrown</option>
+<option value="lightblue">lightblue</option>
+<option value="peachpuff">peachpuff</option>
+</select>
+<font size ="4" color="#FFFFFF">Select Text Color: </font>
+<select id="TextColorOptions" onchange="CheckOptions()">
+<option value="pleaseSelect">Select Text Color</option>
+<option value="DarkSlateGray">DarkSlateGray</option>
+<option value="lavender">Lavender</option>
+<option value="LightCoral">LightCoral</option>
+</select>
+<hr>
+<div class="grid-container">
+  <div class="grid-item"><img src="SportsImages/img1.jpg" style="width:100%" onmouseover="openModal();currentSlide(1)" class="hover-shadow cursor"></div>
+  <div class="grid-item"><img src="SportsImages/img2.jpg" style="width:100%" onmouseover="openModal();currentSlide(2)" class="hover-shadow cursor"></div>
+  <div class="grid-item"><img src="SportsImages/img3.png" style="width:100%" onmouseover="openModal();currentSlide(3)" class="hover-shadow cursor"></div>  
+  <div class="grid-item"><img src="SportsImages/img4.jpg" style="width:100%" onmouseover="openModal();currentSlide(4)" class="hover-shadow cursor"></div>
+  <div class="grid-item"><img src="SportsImages/img5.jpg" style="width:100%" onmouseover="openModal();currentSlide(5)" class="hover-shadow cursor"></div>
+  <div class="grid-item"><img src="SportsImages/img6.jpg" style="width:100%" onmouseover="openModal();currentSlide(6)" class="hover-shadow cursor"></div>  
+  <div class="grid-item"><img src="SportsImages/img7.jpg" style="width:100%" onmouseover="openModal();currentSlide(7)" class="hover-shadow cursor"></div>
+  <div class="grid-item"><img src="SportsImages/img8.jpg" style="width:100%" onmouseover="openModal();currentSlide(8)" class="hover-shadow cursor"></div>
+</div>
+
+
+<div id="myModal" class="modal">
+ <span class="close cursor" onclick="closeModal()">&times;</span>
+ <div class="modal-content">
+ <div class="mySlides">
+ <div class="numbertext">1 / 8</div>
+ <center>
+ <img src="https://s01.sgp1.cdn.digitaloceanspaces.com/article/119435-nrduwpuuiv-1557584546.jpeg" style="width:43%">
+ <h3> Sport : Atheltics </h3><br>
+ </center>
+ </div>
+ <div class="mySlides">
+ <div class="numbertext">2 / 8</div>
+ <center>
+ <img src="https://cdn.wisden.com/wp-content/uploads/2020/05/GettyImages-117023134-scaled-e1590858242407-980x530.jpg" style="width:43%">
+ <h3> Sport : Cricket</h3><br>
+ </center>
+ </div>
+ <div class="mySlides">
+ <div class="numbertext">3 / 8</div>
+ <center>
+ <img src="https://images.glaciermedia.ca/polopoly_fs/1.24026785.1575427188!/fileImage/httpImage/image.jpg_gen/derivatives/landscape_804/a10-12042019-basketball-jpg.jpg" style="width:43%">
+ <h3> Sport : Basketball</h3><br>
+ </center>
+ </div>
+
+ <div class="mySlides">
+ <div class="numbertext">4 / 8</div>
+ <center>
+ <img src="https://collegesport.org.nz/wp-content/uploads/2020/03/IMG_1916-scaled.jpg" style="width:43%">
+ <h3> Athletics : Athletics is a group of sporting events that involves competitive running, jumping, throwing, and walking. The most common types of athletics competitions are track and field, road running, </h3><br>
+ </center>
+ </div>
+
+<div class="mySlides">
+ <div class="numbertext">5 / 8</div>
+ <center>
+ <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSqT3640SBXVhI5wh49FPB1zdC-lH0RC-PpNQ&usqp=CAU" style="width:43%">
+ <h3> Sport : Hockey </h3><br>
+ </center>
+ </div>
+<div class="mySlides">
+ <div class="numbertext">6/ 8</div>
+ <center>
+ <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRNFSYwdSm4qMRFVelQpyoNKU_Ux9dIlk9WqQ&usqp=CAU" style="width:43%">
+ <h3> Basketball : Basketball is a team sport. Two teams of five players each try to score by shooting a ball through a hoop elevated 10 feet above the ground. The game is played on a rectangular floor called the court, and there is a hoop at each end. The court is divided into two main sections by the mid-court line.</h3><br>
+ </center>
+</div>
+<div class="mySlides">
+ <div class="numbertext">7/ 8</div>
+ <center>
+ <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQzwrjSSVS-dByxQpofveDrA06KXDcNE2CC8w&usqp=CAU" style="width:43%">
+ <h3> Hockey : Hockey is a sport in which two teams play against each other by trying to manoeuvre a ball or a puck into the opponent's goal using a hockey stick. There are many types of hockey such as bandy, field hockey, ice hockey and rink hockey.</h3><br>
+ </center>
+</div>
+<div class="mySlides">
+ <div class="numbertext">8/ 8</div>
+ <center>
+ <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTqNJd7lfifjkDKF5Tqb0pmUFmpXygTT4rUSQ&usqp=CAU" style="width:43%">
+ <h3> Cricket : Cricket is a sport which is played between two teams of eleven players each who score runs (points). This is done by hitting the ball across the boundary, or by running between two sets of three small, wooden posts called wickets.</h3><br>
+ </center>
+</div>
+
+
+ </div>
+ <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+ <a class="next" onclick="plusSlides(1)">&#10095;</a>
+ <div class="caption-container">
+ <p id="caption"></p>
+ </div>
+ 
+ 
+ <script>
+function changeBG() {
+ var selectedBGColor = document.getElementById("bgchoice").value;
+ document.body.style.backgroundColor = selectedBGColor;
+}
+function CheckOptions() {
+var selectedTextcolor = document.getElementById("TextColorOptions").value;
+document.body.style.txtcolor = selectedTextcolor;
+}
+function openModal() {
+ document.getElementById("myModal").style.display = "block";
+}
+function closeModal() {
+ document.getElementById("myModal").style.display = "none";
+}
+var slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides(n) {
+ showSlides(slideIndex += n);
+}
+function currentSlide(n) {
+ showSlides(slideIndex = n);
+}
+function showSlides(n) {
+ var i;
+ var slides = document.getElementsByClassName("mySlides");
+ var dots = document.getElementsByClassName("demo");
+ var captionText = document.getElementById("caption");
+ if (n > slides.length) {slideIndex = 1}
+ if (n < 1) {slideIndex = slides.length}
+ for (i = 0; i < slides.length; i++) {
+ slides[i].style.display = "none";
+ }
+ for (i = 0; i < dots.length; i++) {
+ dots[i].className = dots[i].className.replace(" active", "");
+ }
+ slides[slideIndex-1].style.display = "block";
+ dots[slideIndex-1].className += " active";
+ captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+</html>

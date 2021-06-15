@@ -1,0 +1,430 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Interactive Multiple Choice Quiz</title>
+<link rel="stylesheet" href="InteractiveMCQ.css">
+
+</head>
+<body>
+<p id="heading">Sports Quiz</p>	
+<div id="QUIZ">
+
+<div class="quizdescription">
+<img src="SportsImages\sportsballs.jpg" id="imgsports" alt="sportsballsimg" >
+<p id="description">This quiz consists of 10 questions related to sports.<br>You have 50s to complete it.</p>	
+<button id="start">Start</button>
+</div>
+	<form  id="questions" onsubmit="return score()" >
+		<div id="quiz-time-left">
+
+		</div>
+		
+		<span class="Qno" id="q1">1.Who invented the basketball game?</span><br>
+		<span class="Ano"><input type="radio" name="q1" id="option1" value="a" ><label for="option1">LeBron James</label>
+		<input type="radio" name="q1" id="option2" value="b" ><label for="option2">Dennis Rodman</label>
+		<input type="radio" name="q1" id="option3" value="c"><label for="option3">James Naismith</label>
+		<input type="radio" name="q1" id="option4" value="d"><label for="option4">Wilt Chamberlain</label><br>
+		<br></span>
+		
+		<span class="Qno"id="q2">2.Which year was Basketball invented?</span><br>
+		<span class="Ano"><input type="radio" name="q2" id="option5" value="e"><label for="option5">1891</label>
+		<input type="radio" name="q2" id="option6" value="f"><label for="option6">1922</label>
+		<input type="radio" name="q2" id="option7" value="g"><label for="option7">1900</label>
+		<input type="radio" name="q2" id="option8" value="h"><label for="option8">1912</label><br>
+		<br></span>
+
+		<span class="Qno"id="q3">3.What do you call refree in cricket?</span><br>
+		<span class="Ano"><input type="radio" name="q3" id="option9" value="i" ><label for="option9">An Umpire</label>
+		<input type="radio" name="q3" id="option10" value="j" ><label for="option10">A Vampire</label>
+		<input type="radio" name="q3" id="option11" value="k"><label for="option11">A Refree</label>
+		<input type="radio" name="q3" id="option12" value="l"><label for="option12">A UmpireRefree</label><br>
+		<br></span>
+
+		<span class="Qno"id="q4">4.What does LBW stand for?</span><br>
+		<span class="Ano"><input type="radio" name="q4" id="option13" value="m" ><label for="option13">Long Ball Wide</label>
+		<input type="radio" name="q4" id="option14" value="n" ><label for="option14">Leg Beyond Width</label>
+		<input type="radio" name="q4" id="option15" value="o"><label for="option15">Lol 'Bout to Win</label>
+		<input type="radio" name="q4" id="option16" value="p"><label for="option16">Leg Before Wicket</label><br>
+		<br></span>
+
+		<span class="Qno"id="q5">5.Which sprinter is named Bath Bullet?</span><br>
+		<span class="Ano"><input type="radio" name="q5" id="option17" value="q" ><label for="option17">Jason Gardener</label>
+		<input type="radio" name="q5" id="option18" value="r" ><label for="option18">Mark Lewis-Francis</label>
+		<input type="radio" name="q5" id="option19" value="s"><label for="option19">Richie Roadrunner</label>
+		<input type="radio" name="q5" id="option20" value="t"><label for="option20">Christian Malcolm</label><br>
+		<br></span>
+
+		<span class="Qno"id="q6">6.Which city will host the 2020 Olympics?</span><br>
+		<span class="Ano"><input type="radio" name="q6" id="option21" value="u" ><label for="option21">Moscow,Russia</label>
+		<input type="radio" name="q6" id="option22" value="v" ><label for="option22">Tokyo,Japan</label>
+		<input type="radio" name="q6" id="option23" value="w"><label for="option23">Berlin,Germany</label>
+		<input type="radio" name="q6" id="option24" value="x"><label for="option24">Madrid,Spain</label><br>
+		<br></span>
+
+		<span class="Qno"id="q7">7.What is the number of players playing on a pitch in a hockey match?</span><br>
+		<span class="Ano"><input type="radio" name="q7" id="option25" value="y" ><label for="option25">18</label>
+		<input type="radio" name="q7" id="option26" value="z" ><label for="option26">20</label>
+		<input type="radio" name="q7" id="option27" value="a1"><label for="option27">16</label>
+		<input type="radio" name="q7" id="option28" value="b1"><label for="option28">22</label><br>
+		<br></span>
+
+		<span class="Qno"id="q8">8.How many field umpires are there in a hockey match?</span><br>
+		<span class="Ano"><input type="radio" name="q8" id="option29" value="c1" ><label for="option29">1</label>
+		<input type="radio" name="q8" id="option30" value="d1" ><label for="option30">2</label>
+		<input type="radio" name="q8" id="option31" value="e1"><label for="option31">3</label>
+		<input type="radio" name="q8" id="option32" value="f1"><label for="option32">4</label><br>
+		<br></span>
+
+		<span class="Qno"id="q9">9.What is the the longest running race in Athletics?</span><br>
+		<span class="Ano"><input type="radio" name="q9" id="option33" value="g1" ><label for="option33">steeplechase</label>
+		<input type="radio" name="q9" id="option34" value="h1" ><label for="option34">10000 meters</label>
+		<input type="radio" name="q9" id="option35" value="i1"><label for="option35">marathon</label>
+		<input type="radio" name="q9" id="option36" value="j1"><label for="option36">5000 meters</label><br>
+		<br></span>
+
+		<span class="Qno"id="q10">10.How many basketball players are there on the court at one time?</span><br>
+		<span class="Ano"><input type="radio" name="q10" id="option37" value="k1" ><label for="option37">10</label>
+		<input type="radio" name="q10" id="option38" value="l1" ><label for="option38">5</label>
+		<input type="radio" name="q10" id="option39" value="m1"><label for="option39">6</label>
+		<input type="radio" name="q10" id="option40" value="n1"><label for="option40">15</label><br>
+		<br></span>
+		
+		
+		<button type="submit" id="submitanswer">Submit</button>
+		<button id="showresultbox">Show Result Box</button>
+	</form>	
+
+	 <div id="resultbox">	
+		
+		<span id=Rname>Results</span><br>
+		<span class="Rcontent"id="correctno"></span><br>
+		<span  class="Rcontent"id="incorrectno"></span><br>
+		<span  class="Rcontent"id="score"></span><br>
+		<span  class="Rcontent"id="tleft"></span><br><br>
+		<button  id="resetquestions">Restart</button>
+		<button id="showquiz">Show Quiz</button>
+	 </div>	
+	 <script src="InteractiveMCQ.js">
+	</script>	
+	<script>
+	var elements = document.getElementById("questions").elements;
+		function getRadioValue( radioArray ) {
+        var i;
+        for ( i = 0; i < radioArray.length; i++ ) {
+        if ( radioArray[ i ].checked ) {
+        return radioArray[ i ].value;
+           }
+        }
+        return "";
+     }
+const quizbtn=document.getElementById("showresultbox");	 
+var sec = 50;
+var time ;
+
+function myTimer() {
+    document.getElementById("quiz-time-left").innerHTML = sec + "sec left";
+    if(sec<=0){
+      score();
+	  quizbtn.disabled=false;
+	  
+	}else{
+		sec--;
+		time=setTimeout(myTimer,1000);
+		quizbtn.disabled=true;
+		
+		
+	}
+        
+		
+    }
+
+
+
+document.getElementById("start").addEventListener("click",startquiz);
+function startquiz(){
+	time=setTimeout(myTimer,1000);
+	document.getElementById("questions").style.display="block";
+	document.getElementById("start").style.display="none";
+	document.getElementById("description").style.display="none";
+	document.getElementById("imgsports").style.display="none";
+
+}
+
+var totalscore;
+function score(){
+	clearInterval(time);
+	quizbtn.disabled=false;		
+	var useranswer1=getRadioValue(document.getElementsByName("q1"));
+    totalscore=0;
+	var correct=0;
+	var incorrect=0;
+	var useranswer2=getRadioValue(document.getElementsByName("q2"));
+	var useranswer3=getRadioValue(document.getElementsByName("q3"));
+	var useranswer4=getRadioValue(document.getElementsByName("q4"));
+	var useranswer5=getRadioValue(document.getElementsByName("q5"));
+    var useranswer6=getRadioValue(document.getElementsByName("q6"));
+	var useranswer7=getRadioValue(document.getElementsByName("q7"));
+	var useranswer8=getRadioValue(document.getElementsByName("q8"));
+	var useranswer9=getRadioValue(document.getElementsByName("q9"));
+	var useranswer10=getRadioValue(document.getElementsByName("q10"));
+
+	  if (useranswer1=="c"){
+		totalscore+=2;
+		
+		correct++;
+		document.getElementById("q1").style.backgroundColor="green";
+
+		
+	  }else{
+		totalscore--;
+		
+		incorrect++;
+		document.getElementById("q1").style.backgroundColor="red";
+		
+	  }
+	  if (useranswer2=="e"){
+		totalscore+=2;
+		
+		correct++;
+		document.getElementById("q2").style.backgroundColor="green";
+	  }else{
+		totalscore--;
+		
+		incorrect++;
+		document.getElementById("q2").style.backgroundColor="red";
+	  }
+	  if (useranswer3=="i"){
+		totalscore+=2;
+		
+		correct++;
+        document.getElementById("q3").style.backgroundColor="green";
+		
+	  }else{
+		totalscore--;
+		
+		incorrect++;
+		document.getElementById("q3").style.backgroundColor="red";
+	  }
+	  if (useranswer4=="p"){
+		totalscore+=2;
+		
+		correct++;
+        document.getElementById("q4").style.backgroundColor="green";
+		
+	  }else{
+		totalscore--;
+		
+		incorrect++;
+		document.getElementById("q4").style.backgroundColor="red";
+	  }
+	  if (useranswer5=="q"){
+		totalscore+=2;
+		
+		correct++;
+        document.getElementById("q5").style.backgroundColor="green";
+		
+	  }else{
+		totalscore--;
+		
+		incorrect++;
+		document.getElementById("q5").style.backgroundColor="red";
+	  }
+	  if (useranswer6=="v"){
+		totalscore+=2;
+		
+		correct++;
+        document.getElementById("q6").style.backgroundColor="green";
+		
+	  }else{
+		totalscore--;
+		
+		incorrect++;
+		document.getElementById("q6").style.backgroundColor="red";
+	  }
+	  if (useranswer7=="b1"){
+		totalscore+=2;
+		
+		correct++;
+        document.getElementById("q7").style.backgroundColor="green";
+		
+	  }else{
+		totalscore--;
+		
+		incorrect++;
+		document.getElementById("q7").style.backgroundColor="red";
+	  }
+	  if (useranswer8=="d1"){
+		totalscore+=2;
+		
+		correct++;
+        document.getElementById("q8").style.backgroundColor="green";
+		
+	  }else{
+		totalscore--;
+		
+		incorrect++;
+		document.getElementById("q8").style.backgroundColor="red";
+	  }
+	  if (useranswer9=="i1"){
+		totalscore+=2;
+		
+		correct++;
+        document.getElementById("q9").style.backgroundColor="green";
+		
+	  }else{
+		totalscore--;
+		
+		incorrect++;
+		document.getElementById("q9").style.backgroundColor="red";
+	  }
+	  if (useranswer10=="k1"){
+		totalscore+=2;
+		
+		correct++;
+		document.getElementById("q10").style.backgroundColor="green";
+
+		
+	  }else{
+		totalscore--;
+		
+		incorrect++;
+		document.getElementById("q10").style.backgroundColor="red";
+	  }
+	  if (totalscore<=-1){
+		totalscore=0;
+        document.getElementById("QUIZ").style.backgroundColor="#feae96";
+		document.getElementById("QUIZ").style.backgroundImage="linear-gradient(315deg, #feae96 0%, #fe0944 74%)";
+ 
+	  }
+	  if(totalscore>=1 && totalscore<=10){
+		document.getElementById("QUIZ").style.backgroundColor= "#f9ff60";
+		document.getElementById("QUIZ").style.backgroundImage="linear-gradient(315deg, #f9ff60 0%, #ffef77 74%)";
+		
+ 
+	  }
+	  if(totalscore>=11 && totalscore<=20){
+		document.getElementById("QUIZ").style.backgroundColor="#7ee8fa";
+		document.getElementById("QUIZ").style.backgroundImage="linear-gradient(to right, #ffb347, #ffcc33)";
+		
+		
+	}
+	document.getElementById('correctno').innerHTML="No of correct answers:"+correct;
+	  document.getElementById('incorrectno').innerHTML="No of incorrect answers:"+incorrect;
+	  document.getElementById('score').innerHTML = "Total Score:"+totalscore;
+	  document.getElementById('tleft').innerHTML="Time Used:"+(49-Math.floor(sec))+" seconds";
+	  for (var i = 0, len = elements.length; i < len-1; ++i) {
+      elements[i].disabled = true;
+  }  document.getElementById("QUIZ").style.overflow="hidden";
+     document.getElementById("resultbox").style.display="block";
+	 document.getElementById("questions").style.display="none";
+	 document.getElementById("heading").scrollIntoView();
+	 
+	 return false;
+	
+	
+	
+	
+}
+document.getElementById("resetquestions").addEventListener("click",restartquiz);
+function restartquiz(){
+	sec=50;
+	myTimer();
+
+	var ele1=document.getElementsByName("q1");
+	for(var i=0;i<ele1.length;i++)
+	  ele1[i].checked=false;
+	
+	var ele2=document.getElementsByName("q2");
+	for(var i=0;i<ele2.length;i++)
+	  ele2[i].checked=false;
+
+	var ele3=document.getElementsByName("q3");
+	for(var i=0;i<ele3.length;i++)
+	  ele3[i].checked=false;
+
+	var ele4=document.getElementsByName("q4");
+	for(var i=0;i<ele4.length;i++)
+	  ele4[i].checked=false;
+
+	var ele5=document.getElementsByName("q5");
+	for(var i=0;i<ele5.length;i++)
+	  ele5[i].checked=false;
+
+	var ele6=document.getElementsByName("q6");
+	for(var i=0;i<ele6.length;i++)
+	  ele6[i].checked=false;
+
+	var ele7=document.getElementsByName("q7");
+	for(var i=0;i<ele7.length;i++)
+	  ele7[i].checked=false;
+
+	var ele8=document.getElementsByName("q8");
+	for(var i=0;i<ele8.length;i++)
+	  ele8[i].checked=false;
+
+	var ele9=document.getElementsByName("q9");
+	for(var i=0;i<ele1.length;i++)
+	  ele9[i].checked=false;
+
+	var ele10=document.getElementsByName("q10");
+	for(var i=0;i<ele10.length;i++)
+	  ele10[i].checked=false;            
+
+
+	  
+	  document.getElementById("QUIZ").style.background="#dae4ee";
+	  document.getElementById("q1").style.backgroundColor="#dae4ee";
+	  document.getElementById("q2").style.backgroundColor="#dae4ee";
+	  document.getElementById("q3").style.backgroundColor="#dae4ee";
+	  document.getElementById("q4").style.backgroundColor="#dae4ee";
+	  document.getElementById("q5").style.backgroundColor="#dae4ee";
+	  document.getElementById("q6").style.backgroundColor="#dae4ee";
+	  document.getElementById("q7").style.backgroundColor="#dae4ee";
+	  document.getElementById("q8").style.backgroundColor="#dae4ee";
+	  document.getElementById("q9").style.backgroundColor="#dae4ee";
+	  document.getElementById("q10").style.backgroundColor="#dae4ee";
+	  document.getElementById('correctno').innerHTML=" ";
+	  document.getElementById('incorrectno').innerHTML=" ";
+	  document.getElementById('score').innerHTML = " ";
+	  document.getElementById('tleft').innerHTML=" ";
+	  for (var i = 0, len = elements.length; i < len-1; ++i) {
+      elements[i].disabled = false;
+  }
+     document.getElementById("questions").style.display="block";
+	 document.getElementById("resultbox").style.display="none";
+	 document.getElementById("QUIZ").style.overflow="scroll";
+	 document.getElementById("heading").scrollIntoView();
+
+}
+document.getElementById("showquiz").addEventListener("click",showquizbutton);
+function showquizbutton(){
+	document.getElementById("questions").style.display="block";
+	document.getElementById("resultbox").style.display="none";
+	document.getElementById("heading").scrollIntoView();
+	document.getElementById("QUIZ").style.overflow="scroll";
+	document.getElementById("QUIZ").style.background="#dae4ee";
+
+}
+document.getElementById("showresultbox").addEventListener("click",showresultbutton);
+function showresultbutton(){
+	document.getElementById("questions").style.display="none";
+	document.getElementById("resultbox").style.display="block";
+   
+}
+
+
+
+	</script>	
+	  
+</div>
+</body>
+<footer>
+<div class="fbuttons">	
+<a href="pageEditor3.html"><button class="footerbutton">Chathuri:Page Editor 3</a></button>
+<a href="basketball.html"><button class="footerbutton">Basketball</a></button>	
+</div>
+</footer>	
+
+
+</html>
